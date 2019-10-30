@@ -173,6 +173,19 @@ namespace PrintCore
             return builder.ToString();
         }
 
+        public void PrintTextLine(string content, FontSize fontSize = FontSize.Normal, StringAlignment stringAlignment = StringAlignment.Near, float width = 1, float offset = 0)
+        {
+            PrintText(content, fontSize, stringAlignment, width, offset);
+            PrintLine(fontSize);
+        }
+
+        public void PrintTitleLine(string content, FontSize fontSize = FontSize.Normal, float width = 1, float offset = 0)
+        {
+            PrintText(content, fontSize, StringAlignment.Center, width, offset);
+            PrintLine(fontSize);
+            PrintLine(fontSize);
+        }
+
         #endregion
     }
 

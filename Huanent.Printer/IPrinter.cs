@@ -17,6 +17,18 @@ namespace PrintCore
             float offset = 0
             );
 
+        void PrintTextLine(string content,
+            FontSize fontSize = FontSize.Normal,
+            StringAlignment stringAlignment = StringAlignment.Near,
+            float width = 1,
+            float offset = 0);
+
+        void PrintTitleLine(string content,
+            FontSize fontSize = FontSize.Normal,
+            StringAlignment stringAlignment = StringAlignment.Near,
+            float width = 1,
+            float offset = 0);
+
         void PrintImage(
             Image image,
             StringAlignment stringAlignment = StringAlignment.Near);
